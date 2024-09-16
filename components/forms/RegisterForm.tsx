@@ -391,7 +391,7 @@ const RegisterForm = ({ user }: { user: User }) => {
                             <SelectItem key={state} value={state}>
                               {state}
                             </SelectItem>
-                          )
+                          ),
                         )}
                     </SelectContent>
                   </Select>
@@ -421,7 +421,7 @@ const RegisterForm = ({ user }: { user: User }) => {
                             <SelectItem key={city} value={city}>
                               {city}
                             </SelectItem>
-                          )
+                          ),
                         )}
                     </SelectContent>
                   </Select>

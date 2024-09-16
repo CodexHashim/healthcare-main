@@ -6,7 +6,7 @@ const fetchPatientsFromDatabase = async (): Promise<any[]> => {
   try {
     const response = await databases.listDocuments(
       process.env.DATABASE_ID!,
-      process.env.PATIENT_COLLECTION_ID!
+      process.env.PATIENT_COLLECTION_ID!,
     );
     return response.documents; // Adjust this based on your response structure
   } catch (error) {
@@ -17,7 +17,7 @@ const fetchPatientsFromDatabase = async (): Promise<any[]> => {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   try {
     const patients = await fetchPatientsFromDatabase();
