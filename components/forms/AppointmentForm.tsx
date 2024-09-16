@@ -54,7 +54,7 @@ export const AppointmentForm = ({
   });
 
   const onSubmit = async (
-    values: z.infer<typeof AppointmentFormValidation>,
+    values: z.infer<typeof AppointmentFormValidation>
   ) => {
     setIsLoading(true);
 
@@ -87,13 +87,14 @@ export const AppointmentForm = ({
         if (newAppointment) {
           form.reset();
           router.push(
-            `/patients/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`,
+            `/patients/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`
           );
         }
       } else {
         const appointmentToUpdate = {
           userId,
           appointmentId: appointment?.$id!,
+          timeZone: "Asia/Kolkata", // Replace "your-time-zone" with the actual time zone value
           appointment: {
             primaryPhysician: values.primaryPhysician,
             schedule: new Date(values.schedule),
@@ -125,7 +126,7 @@ export const AppointmentForm = ({
       buttonLabel = "Schedule Appointment";
       break;
     default:
-      buttonLabel = "Submit Apppointment";
+      buttonLabel = "Submit Appointment";
   }
 
   return (
