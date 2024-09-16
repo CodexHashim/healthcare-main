@@ -24,6 +24,11 @@
           "order": "asc",
           "caseInsensitive": true
         }
+      },
+      {
+        "rules": {
+          "import/order": 0
+        }
       }
     ]
   }
